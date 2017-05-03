@@ -6,7 +6,7 @@ iliad = [x.translate(None, ".,!?()\'\"") for x in iliad]
 iliad = [x.lower() for x in iliad]
 #print iliad
 
-#find frequency of word in text
+#find frequency of word in text----------------------
 def wordFreq(word):
   print "Frequency of the word \'" + word + "\':"
   return len(filter(lambda x: x == word.lower(), iliad))
@@ -15,7 +15,7 @@ print wordFreq("sleep")
 print wordFreq("the")
 print ''
 
-#find frequency of group of words
+#find frequency of group of words--------------------
 def groupFreq(words):
   print "Frequency of the word(s) \'" + str(words) + "\':"
   return len(filter(lambda x: True if x in words else False, iliad))
@@ -24,7 +24,7 @@ words = ['we', 'run', 'now', 'food']
 print groupFreq(words)
 print ''
 
-#find most common word
+#find most common word--------------------------
 words = {}
 def commonFreq():
   map(count, iliad)
